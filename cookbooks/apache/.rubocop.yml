@@ -13,8 +13,11 @@ StringLiterals:
 # Style/AlignParameters:
 #   EnforcedStyle: with_fixed_indentation
 
-Style/TrailingComma:
-  EnforcedStyleForMultiline: comma
+# Style/TrailingComma:
+#   EnforcedStyleForMultiline: comma
+
+Style/SingleSpaceBeforeFirstArg:
+  Enabled: false
 
 AllCops:
   Exclude:
