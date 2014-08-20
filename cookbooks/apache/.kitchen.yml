@@ -8,12 +8,17 @@ provisioner:
 
 platforms:
   - name: centos-6.5
+    driver_config:
+      network:
+        - ["private_network", { ip: "192.168.22.22" }]
 
 suites:
   - name: default
     run_list:
       - recipe[apache::default]
     attributes:
+      motd:
+        company: Chef
       apache:
         sites:
           ponies:
