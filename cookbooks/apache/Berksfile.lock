@@ -1,0 +1,9 @@
+DEPENDENCIES
+  apache
+    path: .
+    metadata: true
+
+GRAPH
+  apache (0.4.0)
+    ohai (>= 0.0.0)
+  ohai (2.0.1)
