@@ -3,11 +3,11 @@ Ohai.plugin(:Apache) do
 
   collect_data(:default) do
     apache Mash.new
-    apache[:modules] = {:static => [], :shared => []}
+    apache[:modules] = { static: [], shared: [] }
     modules = shell_out("apachectl -t -D DUMP_MODULES")
     modules.stdout.each_line do |line|
       fullkey, dso_type = line.split.map(&:strip)
-      apache_mod = fullkey.gsub(/_module/,"")
+      apache_mod = fullkey.gsub(/_module/, "")
       if dso_type.match(/shared/)
         apache[:modules][:shared] << apache_mod
       elsif dso_type.match(/static/)

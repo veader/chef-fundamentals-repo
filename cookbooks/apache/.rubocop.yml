@@ -1,0 +1,21 @@
+Style/AlignParameters:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 200
+
+StringLiterals:
+  Enabled: false
+
+# Style/AlignParameters:
+#   EnforcedStyle: with_fixed_indentation
+
+Style/TrailingComma:
+  EnforcedStyleForMultiline: comma
+
+AllCops:
+  Exclude:
+    - "Vagrantfile"

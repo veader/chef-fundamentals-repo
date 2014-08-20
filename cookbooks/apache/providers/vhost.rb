@@ -9,8 +9,8 @@ action :create do
     source "custom.erb"
     mode "0644"
     variables(
-      :document_root => document_root,
-      :port => new_resource.site_port
+      document_root: document_root,
+      port: new_resource.site_port
     )
   end
 
@@ -24,8 +24,8 @@ action :create do
     source "index.html.erb"
     mode "0644"
     variables(
-      :site_name => new_resource.site_name,
-      :port => new_resource.site_port
+      site_name: new_resource.site_name,
+      port: new_resource.site_port
     )
   end
 end

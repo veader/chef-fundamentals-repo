@@ -12,7 +12,7 @@ package "httpd" do
 end
 
 service "httpd" do
-  action [ :enable, :start ]
+  action [:enable, :start]
 end
 
 ruby_block "randomly_choose_language" do
